@@ -1,12 +1,16 @@
 
-class Personagem {
-    constructor(
-        private _nome: string,
-        public energia: number,
-        public vida: number,
-        public ataque: number,
-        public defesa: number
-    ) {}
+export class Personagem {
+    protected _nome: string;
+    protected _vida: number;
+    protected _ataque: number;
+    protected _defesa: number;
+    
+    constructor(nome: string) {
+        this._nome = nome;
+        this._vida = Math.random() * 100;
+        this._ataque = Math.random() * 100;
+        this._defesa = Math.random() * 100;
+    }
 
 
     
@@ -21,21 +25,12 @@ class Personagem {
     
     status(): void {
         console.log("nome", this.nome);
-        console.log("energia",this.energia.toFixed(1));
-        console.log("vida", this.vida.toFixed(1));
-        console.log("ataque", this.ataque.toFixed(1));
-        console.log("defesa", this.defesa.toFixed(1));
+        console.log("vida", this._vida.toFixed(1));
+        console.log("ataque", this._ataque.toFixed(1));
+        console.log("defesa", this._defesa.toFixed(1));
     }
 
  
 }
 
 
-let santa: Personagem;
-santa = new Personagem('Santa', 1000, 100, 1200,1700);
-
-
-let rock: Personagem = new Personagem('Rock', 2000, 180, 56, 560);
-
-santa.status();
-rock.status();

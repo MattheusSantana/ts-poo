@@ -1,19 +1,14 @@
 "use strict";
 class Personagem {
-    constructor() {
-        this.nome = '';
-        this.energia = 0;
-        this.vida = 100;
-        this.ataque = 0;
-        this.defesa = 0;
+    constructor(nome, energia, vida, ataque, defesa) {
+        this.nome = nome;
+        this.energia = energia;
+        this.vida = vida;
+        this.ataque = ataque;
+        this.defesa = defesa;
     }
 }
 let santa;
-santa = new Personagem();
-santa.nome = 'santa';
-santa.vida = 120;
-let rock = new Personagem();
-rock.nome = 'Rock';
-rock.ataque = 2000;
-rock.defesa = 1700;
+santa = new Personagem('Santa', 1000, 100, 1200, 1700);
+let rock = new Personagem('Rock', 2000, 180, 56, 560);
 console.log(santa, rock);

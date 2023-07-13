@@ -1,13 +1,24 @@
 
 class Personagem {
     constructor(
-        public nome: string,
+        private _nome: string,
         public energia: number,
         public vida: number,
         public ataque: number,
         public defesa: number
     ) {}
 
+
+    
+    public get nome() : string {
+        return this._nome
+    }
+        
+    
+    public set nome(nome : string) {
+        this._nome = nome;
+    }
+    
     status(): void {
         console.log("nome", this.nome);
         console.log("energia",this.energia.toFixed(1));

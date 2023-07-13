@@ -1,11 +1,17 @@
 "use strict";
 class Personagem {
-    constructor(nome, energia, vida, ataque, defesa) {
-        this.nome = nome;
+    constructor(_nome, energia, vida, ataque, defesa) {
+        this._nome = _nome;
         this.energia = energia;
         this.vida = vida;
         this.ataque = ataque;
         this.defesa = defesa;
+    }
+    get nome() {
+        return this._nome;
+    }
+    set nome(nome) {
+        this._nome = nome;
     }
     status() {
         console.log("nome", this.nome);
